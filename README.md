@@ -15,9 +15,6 @@ This tool generates a series of images from text prompts using the mflux-generat
 
 1. Ensure you have Node.js installed on your system
 2. Download the script file:
-   ```
-   curl -O https://raw.githubusercontent.com/aprossi/storyboarder/main/generate-images.js
-   ```
 3. Make the script executable:
    ```
    chmod +x generate_images.js
