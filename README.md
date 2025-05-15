@@ -16,7 +16,7 @@ This tool generates a series of images from text prompts using the mflux-generat
 1. Ensure you have Node.js installed on your system
 2. Download the script file:
    ```
-   curl -O https://raw.githubusercontent.com/yourusername/multi-style-generator/main/generate_images.js
+   curl -O https://raw.githubusercontent.com/aprossi/storyboarder/main/generate-images.js
    ```
 3. Make the script executable:
    ```
@@ -29,7 +29,7 @@ This tool generates a series of images from text prompts using the mflux-generat
 ### Basic Usage
 
 ```bash
-./generate_images.js dore ghibli
+./generate-images.js dore ghibli
 ```
 
 This will generate images in both Gustave Doré and Studio Ghibli styles.
@@ -54,13 +54,13 @@ The script includes the following pre-configured artistic styles:
 By default, the script analyzes your prompts to determine the appropriate setting and applies a consistency booster to maintain visual continuity across images. To override this with a custom booster:
 
 ```bash
-./generate_images.js dore watercolor --booster "consistent magical forest with glowing mushrooms and misty atmosphere"
+./generate-images.js dore watercolor --booster "consistent magical forest with glowing mushrooms and misty atmosphere"
 ```
 
 Or using the short form:
 
 ```bash
-./generate_images.js ghibli cartoon -b "consistent steampunk city with brass machinery and clock towers"
+./generate-images.js ghibli cartoon -b "consistent steampunk city with brass machinery and clock towers"
 ```
 
 ## Prompts File
@@ -141,17 +141,17 @@ const SEED = 4;
 
 Fantasy castle adventure:
 ```bash
-./generate_images.js dore ghibli -b "consistent medieval castle with stone towers and mystical surroundings"
+./generate-images.js dore ghibli -b "consistent medieval castle with stone towers and mystical surroundings"
 ```
 
 Underwater exploration:
 ```bash
-./generate_images.js watercolor cartoon -b "consistent underwater seascape with coral reefs and sunbeams filtering through water"
+./generate-images.js watercolor cartoon -b "consistent underwater seascape with coral reefs and sunbeams filtering through water"
 ```
 
 Futuristic city:
 ```bash
-./generate_images.js dore pixel -b "consistent futuristic cyberpunk cityscape with neon lights and tall buildings"
+./generate-images.js dore pixel -b "consistent futuristic cyberpunk cityscape with neon lights and tall buildings"
 ```
 
 ## Troubleshooting
