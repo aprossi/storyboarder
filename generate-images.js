@@ -53,6 +53,106 @@ const STYLE_PRESETS = {
         name: "Claymation",
         description: "stop-motion claymation style with textured surfaces and distinctive modeling clay appearance",
         model: "schnell"
+    },
+    "caravaggio": {
+        name: "Caravaggio",
+        description: "dramatic chiaroscuro style with realistic figures, intense shadows, and theatrical lighting",
+        model: "schnell"
+    },
+    "rembrandt": {
+        name: "Rembrandt",
+        description: "baroque style with warm tones, soft lighting, and introspective realism",
+        model: "schnell"
+    },
+    "impressionist": {
+        name: "Impressionist",
+        description: "loose brushwork with vibrant colors and soft lighting capturing fleeting outdoor scenes",
+        model: "schnell"
+    },
+    "van-gogh": {
+        name: "Van Gogh",
+        description: "expressive post-impressionist style with bold colors, swirling brushstrokes, and emotional intensity",
+        model: "schnell"
+    },
+    "quick-sketch": {
+        name: "Quick Sketch",
+        description: "loose, spontaneous line work like a pencil or ink sketch on a napkin; rough and gestural",
+        model: "schnell"
+    },
+    "technical-drawing": {
+        name: "Technical Drawing",
+        description: "precise, schematic line art with clean geometry, measurements, and architectural clarity",
+        model: "schnell"
+    },
+    "medieval": {
+        name: "Medieval",
+        description: "illuminated manuscript style with flat perspective, gold accents, and ornate decorative borders",
+        model: "schnell"
+    },
+    "anime": {
+        name: "Anime",
+        description: "stylized characters with clean lines, expressive faces, and cel-shaded color",
+        model: "schnell"
+    },
+    "dark-fantasy": {
+        name: "Dark Fantasy",
+        description: "moody, gothic environments with dramatic lighting and ominous visual tone",
+        model: "schnell"
+    },
+    "engraving": {
+        name: "Engraving",
+        description: "fine-line monochrome textures mimicking traditional etching or printmaking",
+        model: "schnell"
+    },
+    "collage": {
+        name: "Collage",
+        description: "mixed media with cut-out textures, layered materials, and eclectic visuals",
+        model: "schnell"
+    },
+    "infographic": {
+        name: "Infographic",
+        description: "colorful, data-driven visuals with icons, graphs, and labeled diagrams",
+        model: "schnell"
+    },
+    "storyboard": {
+        name: "Storyboard",
+        description: "sequential sketch panels with framing and motion notes, like a film draft",
+        model: "schnell"
+    },
+    "blueprint": {
+        name: "Blueprint",
+        description: "technical architectural drawings with monochrome lines and precise dimensions",
+        model: "schnell"
+    },
+    "cubist": {
+        name: "Cubist",
+        description: "fragmented geometric shapes with multiple perspectives and abstract composition",
+        model: "schnell"
+    },
+    "surrealist": {
+        name: "Surrealist",
+        description: "dreamlike and irrational imagery with symbolic and unexpected juxtapositions",
+        model: "schnell"
+    },
+    "minimalist": {
+        name: "Minimalist",
+        description: "clean, reduced design with limited color and emphasis on space and form",
+        model: "schnell"
+    },
+    "byzantine": {
+        name: "Byzantine",
+        description: "iconic religious art with flat gold backgrounds, stylized figures, and symbolic forms",
+        model: "schnell"
+    },
+    "renaissance": {
+        name: "Renaissance",
+        description: "realistic composition with balanced proportions, sfumato, and classical themes",
+        model: "schnell"
+    },
+    "art-nouveau": {
+        name: "Art Nouveau",
+        description: "elegant organic lines, floral patterns, and decorative flowing forms",
+        model: "schnell"
     }
 };
 
@@ -153,20 +253,20 @@ function createMasterGallery(stylesGenerated) {
             
             <div class="gallery">
                 ${promptsArray.map((prompt, index) => {
-                    const imagePath = `./${styleKey}/image_${index.toString().padStart(3, '0')}.png`;
-                    
-                    return `
+        const imagePath = `./${styleKey}/image_${index.toString().padStart(3, '0')}.png`;
+        
+        return `
                     <div class="image-container">
                         <div class="image-number">Chapter ${index + 1}</div>
                         <img src="${imagePath}" alt="${styleName} - Chapter ${index + 1}">
                         <div class="image-caption">${prompt}</div>
                     </div>`;
-                }).join('')}
+    }).join('')}
             </div>
         </div>`;
-    }
-    
-    const galleryHTML = `
+}
+
+const galleryHTML = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -451,8 +551,8 @@ function createMasterGallery(stylesGenerated) {
 </html>
 `;
 
-    fs.writeFileSync(path.join(OUTPUT_DIR, 'gallery.html'), galleryHTML);
-    console.log(`Master gallery created at ${path.join(OUTPUT_DIR, 'gallery.html')}`);
+fs.writeFileSync(path.join(OUTPUT_DIR, 'gallery.html'), galleryHTML);
+console.log(`Master gallery created at ${path.join(OUTPUT_DIR, 'gallery.html')}`);
 }
 
 // Command line argument parsing
